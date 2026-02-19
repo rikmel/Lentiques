@@ -1,0 +1,5 @@
+# Keep source code out of the public repo
+Main.lua
+Loader.lua
+*.lua
+!version.txt
