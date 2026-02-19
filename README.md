@@ -1,58 +1,24 @@
-# ✦ Hiyori On Top ✦ — Auto Fuse & Money Machine
+# ✦ Hiyori On Top ✦ — Version Tracker
 
-> Automatic brainrot fusing, money collection, and dupe tracking for Tsunami.
+> This repo contains **only** `version.txt` for the auto-update system.
+> The script source code is delivered through Luarmor (key-protected).
 
-## 🚀 Quick Start
+## 🔄 How Auto-Update Works
 
-1. **Get your script key** from Luarmor
-2. **Copy the loader below** into your executor
-3. **Edit the `_G` config** with your settings
-4. **Execute!**
+1. The script checks `version.txt` in this repo every **15 minutes**
+2. If the version here is newer than the running script → auto-update triggers
+3. The script cleanly shuts down and **re-executes via Luarmor**
+4. Your `_G` config is preserved automatically — no action needed
 
-```lua
--- ┌─────────────────────────────────────────────────────────┐
--- │  YOUR CONFIGURATION (edit these before executing)       │
--- └─────────────────────────────────────────────────────────┘
+## 📦 Current Version
 
-_G.MutationBrainrot = { "Money", "UFO", "Gold", "Emerald" }
-_G.BrainrotName     = "Your Brainrot Name"
-_G.WebhookLink      = "YOUR_DISCORD_WEBHOOK_URL"
+**v5.0**
 
--- ┌─────────────────────────────────────────────────────────┐
--- │  LUARMOR AUTH (your unique key)                         │
--- └─────────────────────────────────────────────────────────┘
+## 📁 What's In This Repo
 
-script_key = "YOUR_SCRIPT_KEY"
-loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/afea565efebb00ff071956e6553a9702.lua"))()
-```
+| File | Purpose |
+|------|---------|
+| `version.txt` | Latest version string (checked by the auto-updater) |
+| `README.md` | This file |
 
-## 🔄 Auto-Update
-
-The script **automatically checks for updates every 15 minutes**. When a new version is detected:
-- A webhook notification is sent to your Discord
-- The current script shuts down cleanly
-- The new version is fetched and re-executed
-- Your `_G` config is preserved — no action needed!
-
-## ⚙️ Configuration
-
-| Variable | Type | Description |
-|----------|------|-------------|
-| `_G.MutationBrainrot` | `table` | List of mutations your brainrot can get after fusing |
-| `_G.BrainrotName` | `string` | Name of the brainrot you want to fuse |
-| `_G.WebhookLink` | `string` | Discord webhook URL for dupe notifications |
-
-## 📋 Features
-
-- **Auto Fuse Mode** — Detects active maps and automatically fuses brainrots
-- **Money Mode** — Collects money while waiting for maps
-- **Dupe Detection** — Peak tracking system that detects new duplicates
-- **Discord Webhooks** — Rich embeds with session stats, inventory breakdown, speed, and map info
-- **Speed Upgrade** — Automatically upgrades speed to 400 on startup
-- **Luck Timer** — Waits for max luck before entering fuse mode
-- **Tsunami Protection** — Builds walls and retreats during waves
-- **Auto-Update** — Checks GitHub every 15 minutes for new versions
-
-## 📦 Version
-
-Current: **v5.0**
+> ⚠️ **No source code is stored here.** The script is protected behind Luarmor.
